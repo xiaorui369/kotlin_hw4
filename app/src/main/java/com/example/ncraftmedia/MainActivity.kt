@@ -11,7 +11,7 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 
 class MainActivity : AppCompatActivity() {
-    val loc = Location(22.33,123.00, "Somewhere")
+    val loc = Location(22.33,123.00, "Somewhere near")
     var myActions = MyActions(10,1,2,false, false)
     var post = Post(1, "Netology", "First post from the future", "20.09.2019", false)
     fun postContent() {
@@ -37,10 +37,10 @@ class MainActivity : AppCompatActivity() {
         val counterM = findViewById<TextView>(R.id.counterMsg)
         val counterS = findViewById<TextView>(R.id.counterShare)
         val address = findViewById<TextView>(R.id.address)
-        counterM.text = "${myActions.commentCounter}"
-        counterV.text = "${myActions.likeCounter}"
-        counterS.text = "${myActions.shareCounter}"
-        address.text = "${loc.address}"
+        counterM.text = myActions.commentCounter.toString()
+        counterV.text = myActions.likeCounter.toString()
+        counterS.text = myActions.shareCounter.toString()
+        address.text = loc.address
 
         if (myActions.likeCounter == 0 || myActions.shareCounter == 0 || myActions.commentCounter == 0){
             counterM.text = ""
