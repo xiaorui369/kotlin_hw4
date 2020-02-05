@@ -63,21 +63,21 @@
             android:id="@+id/likeBtn"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginStart="192dp"
+            android:layout_marginStart="188dp"
             android:layout_marginTop="16dp"
             android:background="@android:color/transparent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/contentTv"
-            app:layout_constraintVertical_bias="0.333"
+            app:layout_constraintVertical_bias="0.0"
             app:srcCompat="@drawable/ic_favorite_border_black_24dp">
 
         </ImageButton>
 
         <ImageButton
             android:id="@+id/messageBtn"
-            android:layout_width="21dp"
-            android:layout_height="30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_marginStart="32dp"
             android:layout_marginTop="16dp"
             android:background="@android:color/transparent"
@@ -114,6 +114,50 @@
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/ic_avatar"
             tools:layout_editor_absoluteX="-3dp" />
+
+        <TextView
+            android:id="@+id/counter"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toEndOf="@+id/likeBtn"
+            app:layout_constraintTop_toBottomOf="@+id/contentTv" />
+
+        <TextView
+            android:id="@+id/counterMsg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toEndOf="@+id/messageBtn"
+            app:layout_constraintTop_toBottomOf="@+id/contentTv" />
+
+        <TextView
+            android:id="@+id/counterShare"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="20dp"
+            app:layout_constraintStart_toEndOf="@+id/shareBtn"
+            app:layout_constraintTop_toBottomOf="@+id/contentTv" />
+
+        <ImageButton
+            android:id="@+id/locationButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="140dp"
+            app:layout_constraintEnd_toStartOf="@+id/likeBtn"
+            app:layout_constraintTop_toBottomOf="@+id/contentTv"
+            app:srcCompat="@drawable/ic_location_on_black_24dp" />
+
+        <TextView
+            android:id="@+id/address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/locationButton" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
