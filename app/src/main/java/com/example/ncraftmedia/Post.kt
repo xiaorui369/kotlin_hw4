@@ -1,9 +1,3 @@
 package com.example.ncraftmedia
 
-class Post (
-    val id: Long,
-    val author: String,
-    val content: String,
-    val created: String,
-    var likedByMe: Boolean
-)
+open class Post(open var id: Long, open var author: String, open var content: String, open var created: String, open var likedByMe: Boolean)
