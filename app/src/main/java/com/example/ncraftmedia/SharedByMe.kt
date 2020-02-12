@@ -3,20 +3,20 @@ package com.example.ncraftmedia
 import android.widget.ImageButton
 import android.widget.TextView
 
-class SharedByMe(post: Post, counters:Counters, shareBtn: ImageButton, counterS: TextView, contentTv: TextView) {
+class SharedByMe(post: Post, shareBtn: ImageButton, counterS: TextView, contentTv: TextView) {
     init {
-        if (!counters.sharedByMe){
-            counters.sharedByMe = true
-            counters.shareCounter++
+        if (!post.sharedByMe){
+            post.sharedByMe = true
+            post.shareCounter++
             shareBtn.setImageResource(R.drawable.ic_share_black_24dp)
-            counterS.text = "${counters.shareCounter}"
+            counterS.text = "${post.shareCounter}"
             contentTv.text = post.content
         } else {
-            counters.sharedByMe = false
-            counters.shareCounter--
+            post.sharedByMe = false
+            post.shareCounter--
             shareBtn.setImageResource(R.drawable.ic_share_grey_24dp)
-            counterS.text = "${counters.shareCounter}"
-            if (counters.shareCounter == 0){
+            counterS.text = "${post.shareCounter}"
+            if (post.shareCounter == 0){
                 contentTv.text = ""
                 counterS.text=""
             }
