@@ -6,6 +6,11 @@ class SpecialPost(
     override var content: String,
     override var created: String,
     override var likedByMe: Boolean,
+    override var likeCounter: Int,
+    override var shareCounter: Int,
+    override var commentCounter: Int,
+    override var commentedByMe: Boolean,
+    override var sharedByMe: Boolean,
     val lat: Double,
     val lon: Double,
     val address: String
@@ -14,5 +19,10 @@ class SpecialPost(
     author,
     content,
     created,
-    likedByMe
+    likedByMe,
+    likeCounter,
+    shareCounter,
+    commentCounter,
+    commentedByMe,
+    sharedByMe
 )
