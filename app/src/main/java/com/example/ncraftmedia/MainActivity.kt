@@ -12,7 +12,6 @@ import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
     val specialPost = SpecialPost(2, "Netology", "Post from the future", "20.09.2019",false, 12,12, 13, false, false, 123.0,120.0,"Somewhere")
-    //var counters = Counters(10,1,2,false, false)
     var post = Post(1, "Netology", "First post from the future", "20.09.2019",false, 10,10,10,false,false)
     fun postContent() {
         createdTv.text = post.created
